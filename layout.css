@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+img{ width: 100%;}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.layout_size{
+
+    width: 100%;
+    max-width: 106em ;
+    min-width: 10em;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+
+}
+.grid-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+header{
+    background-color: black;
+    color: white;
+    height: 5em;
+}
+
+
+.start-container{
+    width: 100%;
+    height: 50vh;
+    text-align:left;
+}
+
+.welcome{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    width: 20em;
+    font-weight: 400;
+}
+
+.options-container{
+    width: 100%;
+    
+    display: grid;
+    background-color: black;
+    
+    grid-template-areas: "paper  rock  scissors";
+    grid-template-columns: repeat( auto-fit minmax(10em, 1fr));
+    grid-template-rows: 10em ;
+}
+
+
+
+.paper{
+    grid-area: paper;
+    }
+
+ .rock{
+        grid-area: rock ;
+        }
+
+.scissors{
+    grid-area: scissors;
+   
+}
+
+.paper-img,
+.rock-img,
+.scissors-img{
+    width: 5em ;
+    height: 5em;
+    background-color: rgb(195, 195, 202);
+    border-radius: 50%;
+    
+}
+
+.paper-img:hover,
+.rock-img:hover,
+.scissors-img:hover{
+    transform: translatey(-.5em);
+    transition: all .4s;
+}
+
+.output{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    background-color: white;
+    grid-template-columns: repeat( auto-fit minmax(10em, 30em));
+    grid-template-areas: "playerOutput     vs       pcOutput"
+                         "result        result      result";
+     grid-template-rows: repeat(2, auto) ;
+}
+
+.playerOutput{
+    grid-area: playerOutput;
+    
+
+}
+
+#player,
+#pc{
+    width: 5em;
+    height: 5em;
+
+}
+
+.vs{
+    grid-area: vs;
+    background-color: #b1cfda;
+
+}
+
+.pcOutput{
+    grid-area: pcOutput;
+   
+    
+}
+
+
+.result{
+    grid-area: result;
+    background-color: rgb(8, 8, 7);
+    color:#b1cfda ;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3em;
+}
+
+@media ( min-width: 700px ) {
+
+    .paper-img,
+.rock-img,
+.scissors-img{
+    width: 10em ;
+    height: 10em;
+    background-color: rgb(195, 195, 202);
+}
+    
+
+#player,
+#pc{
+    width: 10em;
+    height: 10em;
+
+}
+
+h1{
+    font-size: 2em;
+}
+.welcome{
+    font-size: 2em;
+}
+}
